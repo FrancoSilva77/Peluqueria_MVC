@@ -12,7 +12,7 @@ class ApiController
   {
     $servicios = Servicio::all();
 
-    echo json_encode($servicios);
+    $json = json_encode($servicios, JSON_UNESCAPED_LINE_TERMINATORS);
   }
 
   public static function guardar()
